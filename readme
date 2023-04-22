@@ -35,3 +35,27 @@ Just add this dependency, start the server and open the URL mentioned above
 -> Configured and integrated MongoDB using MongoRepository. (Another option was to use Mongo Template, but for that I had to do some configurations, initialize the MongoClient, and return the mongoTemplate)
 -> DB name is 'test'
 -> There are 2 collections right now : 'incomes', 'expenses'
+
+
+4) PROCESS TO PUSH IT TO ORIGIN ON THE FIRST TIME :
+-> Create repo on github
+-> Initialize the directory as git repo by : git init
+-> Add files to git and commit it.
+-> Add a remote origin by : git remote add origin <ssh-url>
+Example : git remote add origin git@github.com:kdcool98/expense_tracker_java_backend.git
+-> If remote already exists for the git repo, then update it by : git remote set-url origin <ssh-url>
+Example : git remote set-url origin git@github.com:kdcool98/expense_tracker_java_backend.git
+-> Push it normally :
+git push origin <branch-name> (if just want to push it)
+        (OR)
+git push -u origin <branch-name> (if pushing the branch for the first time and want it to track the remote branch)
+        (OR)
+git push (if branch is set to track remote branch already)
+
+NOTE :::::: This push might give an error if your github account doesn't have your public ssh key. As it might not bee able to authenticate the user. So, for that : 
+-> Open command prompt.
+-> Type 'ssh-keygen' which will generate a public and private key pair for you. So, whenever you will have to ssh anywhere you can add the public key there, which will authenticate you by checking and matching your private key as a pair.
+-> This will ask for a few options, like - path and all so if you are already in C:\User\.ssh folder then just keep pressing Enter. Else, either provide the path to .ssh folder, or go to the folder first and then type the command.
+-> Open the id_rsa.pub file.
+-> Copy the public ssh key, then go to your github account settings : Settings -> SSH and GPG keys
+-> Click on New SSH key -> give it a name, like 'id_rsa' or anything, and then paste the public ssh key you generated there.
