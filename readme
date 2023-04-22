@@ -1,0 +1,37 @@
+1) To run the project run :
+(If we want to run the server on default 8080 PORT, or, if the port if aready specified application.properites as server.port=8181)
+-> mvn spring-boot:run 
+
+        (OR)
+
+(If we want to run the server on default 8080 PORT, or, if the port if aready specified application.properites as server.port=8181)
+-> mvn clean package 
+-> java -jar target/connectionProject-0.0.1-SNAPSHOT.jar
+
+        (OR)
+
+(If we want to run the server on a specific PORT say 8181)
+-> mvn -Dmaven.tomcat.port=8181 spring-boot:run
+
+NOTE ::::: Currently, the port is 8181 and is already set in application.properties for this project.
+
+
+2) SWAGGER URL :
+-> Documentation URL in JSON Format : http://localhost:8181/v3/api-docs
+
+-> Swagger UI URL : http://localhost:8181/swagger-ui/index.html#/
+
+NOTE :::::: As springfox swagger doesn't support above spring boot 3, I used open Api to integrate swagger. dependency used is -
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+    <version>2.1.0</version>
+</dependency>
+Just add this dependency, start the server and open the URL mentioned above
+
+
+3) DATABASE :
+-> MongoDB is being used in this project. The DB cluster is being hosted by Mongo Atlas.
+-> Configured and integrated MongoDB using MongoRepository. (Another option was to use Mongo Template, but for that I had to do some configurations, initialize the MongoClient, and return the mongoTemplate)
+-> DB name is 'test'
+-> There are 2 collections right now : 'incomes', 'expenses'
