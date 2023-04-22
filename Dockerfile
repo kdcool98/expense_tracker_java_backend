@@ -1,4 +1,4 @@
-FROM eclipse-temurin::20-jdk-alpine
+FROM eclipse-temurin:20-jdk-alpine
 MAINTAINER keshav.dube
 VOLUME /tmp
 COPY target/*.jar app.jar 
