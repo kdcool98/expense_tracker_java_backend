@@ -1,0 +1,10 @@
+com\projects\expenseTracker\respository\IncomesRepository.class
+com\projects\expenseTracker\controllers\TransactionsController.class
+com\projects\expenseTracker\services\ITransactionsDAOService.class
+com\projects\expenseTracker\respository\ExpensesRepository.class
+com\projects\expenseTracker\configurations\ProjectConfigurations.class
+com\projects\expenseTracker\response\Transaction.class
+com\projects\expenseTracker\ExpenseTrackerApplication.class
+com\projects\expenseTracker\model\Income.class
+com\projects\expenseTracker\services\TransactionsDAOServiceImpl.class
+com\projects\expenseTracker\model\Expense.class
